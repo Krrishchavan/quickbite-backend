@@ -43,10 +43,10 @@ const menuRoutes = require('../routes/menuRoutes');
 const orderRoutes = require('../routes/orderRoutes');
 const restaurantRoutes = require('../routes/restaurantRoutes');
 
-app.use('/auth', authRoutes);
-app.use('/menus', menuRoutes);
-app.use('/orders', orderRoutes);
-app.use('/restaurants', restaurantRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/menus', menuRoutes);
+app.use('/api/orders', orderRoutes);
+app.use('/api/restaurants', restaurantRoutes);
 
 // Export for Vercel
 module.exports = app;
