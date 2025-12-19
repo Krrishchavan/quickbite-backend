@@ -10,20 +10,8 @@ const PORT = process.env.PORT || 5002;
 
 // Middleware
 app.use(express.json());
-// CORS configuration
-const allowedOrigins = [
-  'http://localhost:5173',
-  'https://quickbite-frontend-lake.vercel.app'
-];
-
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: 'http://localhost:5173',
   credentials: true
 }));
 
